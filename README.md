@@ -58,7 +58,7 @@ See [Terminal.ts][properties] in xterm.js
 
 ### Events
 
-`update:title` is emitted when title is changed.
+`update-title` is emitted when title is changed.
 
 `blur` and `focus` event are emitted when corresponding event is occurred.
 

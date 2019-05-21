@@ -35,7 +35,7 @@ export default {
     options: {
       handler (o) {
         Object.keys(o).forEach(key => {
-          if (this[key] !== o[key]) this.$emit('update:' + key, o[key])
+          if (this[key] !== o[key]) this.$emit('update-' + key, o[key])
         })
       },
       deep: true
@@ -54,10 +54,10 @@ export default {
     term.on('blur', () => this.$emit('blur'))
     term.on('focus', () => this.$emit('focus'))
     term.on('resize', size => {
-      if (size.cols !== this.cols) this.$emit('update:cols', size.cols)
-      if (size.rows !== this.rows) this.$emit('update:rows', size.rows)
+      if (size.cols !== this.cols) this.$emit('update-cols', size.cols)
+      if (size.rows !== this.rows) this.$emit('update-rows', size.rows)
     })
-    term.on('title', title => this.$emit('update:title', title))
+    term.on('title', title => this.$emit('update-title', title))
 
     this.$terminal = term
     this.$stream = new TerminalStream(this)
@@ -67,7 +67,7 @@ export default {
 
   beforeDestroy () {
     this.$terminal.selectAll()
-    this.$emit('update:buffer', this.$terminal.getSelection().trim())
+    this.$emit('update-buffer', this.$terminal.getSelection().trim())
     this.$terminal.destroy()
   },
 
