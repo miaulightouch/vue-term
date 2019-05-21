@@ -1,20 +1,20 @@
 # vue-term3
 
-xtermjs + Vue.js, fork from [vue-term], but build with vue-cli 3.
+xtermjs + Vue.js, fork from [vue-term](https://github.com/gwangyi/vue-term), build with vue-cli 3.
 
 ## Installation
 
 Yarn:
 
 ```bash
-$ yarn add vue-term3
+$ yarn add vue-term3 # currnetly unavailable.
 ```
 
 For developer
 
 ```bash
-$ git clone https://github.com/miaulightouch/vue-term
-$ cd vue-term
+$ git clone https://github.com/miaulightouch/vue-term3
+$ cd vue-term3
 $ yarn
 $ yarn build
 ```
